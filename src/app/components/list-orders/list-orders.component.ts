@@ -17,7 +17,15 @@ export class ListOrdersComponent implements OnInit {
 
   constructor(
     private orderService: OrdersService
-  ) { }
+  ) { 
+    this.dtOptions = {
+      pagingType: "simple_numbers",
+      order: [[3, 'desc']],
+      language: {
+        url: '../../assets/i18n/datatables/vi.json'
+      }
+    };
+  }
 
   ngOnInit() {
     this.orderService.getOrders().subscribe(orders => { 

@@ -1,25 +1,27 @@
 <div class="col-md-12">
   <h1>Lịch sử đơn hàng</h1>
 
-  <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" id="dynamic-table_wrapper" class="table table-striped table-bordered
-                table-hover dataTable no-footer" cellspacing="0" width="100%">
-  
-    <thead>
-      <tr>
-        <th>Số tiền thanh toán</th>
-        <th>Tên khách hàng</th>
-        <th>Loại nước</th>
-        <th>Ngày giao dịch</th>
-      </tr>
-    </thead>
-  
-    <tbody>
-      <tr *ngFor="let order of orders">
-        <td>{{ order.payment }}</td>
-        <td>{{ order.owner.username }}</td>
-        <td>{{ order.id_water }}</td>
-        <td>{{ order.created_at }}</td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="table-responsive">
+    <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" id="dynamic-table_wrapper" class="table table-responsive table-striped table-bordered
+                    table-hover dataTable no-footer" cellspacing="0" width="100%">
+    
+      <thead>
+        <tr>
+          <th>Tên khách hàng</th>
+          <th class="text-right">Số tiền thanh toán</th>
+          <th>Loại nước</th>
+          <th>Ngày giao dịch</th>
+        </tr>
+      </thead>
+    
+      <tbody>
+        <tr *ngFor="let order of orders">
+          <td>{{ order.owner.username }}</td>
+          <td class="text-right">{{ order.payment | vnd }}</td>
+          <td>{{ order.id_water }}</td>
+          <td>{{ order.created_at | dateTimeVi}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
