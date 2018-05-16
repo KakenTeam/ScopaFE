@@ -298,6 +298,10 @@ amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
 
+angular-datatables@5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/angular-datatables/-/angular-datatables-5.0.0.tgz#5264116d3e5f9a150403342db9eb91f91f9e06ca"
+
 ansi-html@0.0.7:
   version "0.0.7"
   resolved "https://registry.yarnpkg.com/ansi-html/-/ansi-html-0.0.7.tgz#813584021962a9e9e6fd039f940d12f56ca7859e"
@@ -1538,6 +1542,19 @@ dashdash@^1.12.0:
   resolved "https://registry.yarnpkg.com/dashdash/-/dashdash-1.14.1.tgz#853cfa0f7cbe2fed5de20326b8dd581035f6e2f0"
   dependencies:
     assert-plus "^1.0.0"
+
+datatables.net-dt@^1.10.16:
+  version "1.10.16"
+  resolved "https://registry.yarnpkg.com/datatables.net-dt/-/datatables.net-dt-1.10.16.tgz#6758a308fb9e5f9629fb6541cc301e48ec9ec555"
+  dependencies:
+    datatables.net "1.10.16"
+    jquery ">=1.7"
+
+datatables.net@1.10.16, datatables.net@^1.10.16:
+  version "1.10.16"
+  resolved "https://registry.yarnpkg.com/datatables.net/-/datatables.net-1.10.16.tgz#4b052d1082824261b68eed9d22741b711d3d2469"
+  dependencies:
+    jquery ">=1.7"
 
 date-now@^0.1.4:
   version "0.1.4"
@@ -3383,6 +3400,10 @@ jasmine@^2.5.3:
 jasminewd2@^2.1.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/jasminewd2/-/jasminewd2-2.2.0.tgz#e37cf0b17f199cce23bea71b2039395246b4ec4e"
+
+jquery@>=1.7:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.3.1.tgz#958ce29e81c9790f31be7792df5d4d95fc57fbca"
 
 js-base64@^2.1.8, js-base64@^2.1.9:
   version "2.4.3"
