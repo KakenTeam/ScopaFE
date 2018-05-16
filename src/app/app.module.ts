@@ -1,6 +1,7 @@
 import { HttpClientModule } from "@angular/common/http";
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { DataTablesModule } from 'angular-datatables';
 import { ClickOutsideModule } from 'ng-click-outside';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,6 +26,7 @@ import { SidebarComponent } from './layout/sidebar/sidebar.component';
     AppRoutingModule,
     ClickOutsideModule,
     HttpClientModule,
+    DataTablesModule
   ],
   providers: [
     AuthService,

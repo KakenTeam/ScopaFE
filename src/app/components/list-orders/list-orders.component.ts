@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Subject } from 'rxjs/Subject';
+import { Order } from '../order';
 import { OrdersService } from './../orders.service';
 
 @Component({
@@ -8,12 +10,20 @@ import { OrdersService } from './../orders.service';
 })
 export class ListOrdersComponent implements OnInit {
 
+  dtOptions: DataTables.Settings = {};
+  dtTrigger: Subject<any> = new Subject();
+
+  orders: Order[] = [];
+
   constructor(
     private orderService: OrdersService
   ) { }
 
   ngOnInit() {
-    this.orderService.getOrders().subscribe(orders => console.log(orders));
+    this.orderService.getOrders().subscribe(orders => { 
+      this.orders = orders;
+      this.dtTrigger.next();
+    });
   }
 
 }
