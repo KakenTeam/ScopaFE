@@ -1,4 +1,5 @@
 export interface Card {
   _id: string, 
-  amount: number
+  amount: number,
+  serial: number,
 }
