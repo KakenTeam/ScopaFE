@@ -21,6 +21,7 @@ import { DateTimeViPipe } from './pipes/date-time-vi.pipe';
 import { VndPipe } from './pipes/vnd.pipe';
 import { ToastrService } from './components/toastr.service';
 import { LoggedInGuard } from './logged-in.guard';
+import { ListCardsComponent } from './list-cards/list-cards.component';
 
 
 @NgModule({
@@ -32,7 +33,8 @@ import { LoggedInGuard } from './logged-in.guard';
     ListOrdersComponent,
     DateTimeViPipe,
     VndPipe,
-    LoginComponent
+    LoginComponent,
+    ListCardsComponent
   ],
   imports: [
     BrowserModule,
