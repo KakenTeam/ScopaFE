@@ -1,5 +1,7 @@
 <div class="col-md-12">
   <h1>Danh sách thẻ</h1>
+  <button class="create-order btn btn-primary" (click)="modal.open()">Tạo thẻ mới</button>
+
 
   <div class="table-responsive">
     <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" id="dynamic-table_wrapper" class="table table-responsive table-striped table-bordered
@@ -21,3 +23,23 @@
     </table>
   </div>
 </div>
+
+<bs-modal #modal>
+  <bs-modal-header [showDismiss]="true">
+    <h4 class="modal-title">Thêm thẻ mới</h4>
+  </bs-modal-header>
+  <bs-modal-body>
+  <label
+    class="control-label"
+    [attr.for]="'amount'">Nhập mệnh giá của thẻ: </label>
+    <input
+      class="form-control"
+      id="amount"
+      type=number
+      [(ngModel)]="amount">
+  </bs-modal-body>
+  <bs-modal-footer>
+    <button type="button" class="btn btn-default" (click)="modal.dismiss()">Hủy bỏ</button>
+    <button type="button" class="btn btn-primary" [disabled]="amount===0" (click)="modal.close()" >Tạo mới</button>
+  </bs-modal-footer>
+</bs-modal>

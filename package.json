@@ -27,6 +27,7 @@
     "datatables.net-dt": "^1.10.16",
     "moment": "^2.22.1",
     "ng-click-outside": "^3.3.0",
+    "ng2-bs3-modal": "^0.13.0",
     "ng2-toastr": "^4.1.2",
     "rxjs": "^5.5.2",
     "zone.js": "^0.8.14"

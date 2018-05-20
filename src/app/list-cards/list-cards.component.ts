@@ -1,7 +1,8 @@
 import { OrdersService } from './../components/orders.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Subject } from 'rxjs/Subject';
 import { Card } from '../components/card';
+import { BsModalComponent } from 'ng2-bs3-modal';
 
 @Component({
   selector: 'app-list-cards',
@@ -10,8 +11,11 @@ import { Card } from '../components/card';
 })
 export class ListCardsComponent implements OnInit {
 
+  @ViewChild("modal") modal: BsModalComponent;
+
   dtOptions: DataTables.Settings = {};
   dtTrigger: Subject<any> = new Subject();
+  amount: number = 0;
 
   cards: Card[] = [];
 

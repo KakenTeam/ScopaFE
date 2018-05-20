@@ -2,7 +2,7 @@ import { AdminGuard } from './auth/admin.guard';
 import { DatePipe } from "@angular/common";
 import { HttpClientModule } from "@angular/common/http";
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from "@angular/forms";
+import { ReactiveFormsModule, FormsModule } from "@angular/forms";
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { DataTablesModule } from 'angular-datatables';
@@ -22,7 +22,7 @@ import { VndPipe } from './pipes/vnd.pipe';
 import { ToastrService } from './components/toastr.service';
 import { LoggedInGuard } from './logged-in.guard';
 import { ListCardsComponent } from './list-cards/list-cards.component';
-
+import { BsModalModule } from 'ng2-bs3-modal';
 
 @NgModule({
   declarations: [
@@ -40,11 +40,13 @@ import { ListCardsComponent } from './list-cards/list-cards.component';
     BrowserModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
+    FormsModule,
     AppRoutingModule,
     ClickOutsideModule,
     HttpClientModule,
     DataTablesModule,
-    ToastModule.forRoot()
+    ToastModule.forRoot(),
+    BsModalModule
   ],
   providers: [
     AuthService,
