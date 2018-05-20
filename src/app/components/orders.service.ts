@@ -24,7 +24,7 @@ export class OrdersService {
   createCard(amount: number): Observable<Card> {
     let url = environment.base_url + '/cards';
     let param = { amount: amount };
-    return this.http.post(url, amount)
+    return this.http.post(url, param)
                .pipe(
                  map((res: any) => res.card as Card)
                );

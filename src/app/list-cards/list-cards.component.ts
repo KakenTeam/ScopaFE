@@ -40,4 +40,12 @@ export class ListCardsComponent implements OnInit {
 
   }
 
+  sendRequest() {
+    this.orderService.createCard(this.amount)
+        .subscribe(card => {
+          this.cards.unshift(card);
+          this.amount = 0;
+        })
+  }
+
 }

@@ -40,6 +40,6 @@
   </bs-modal-body>
   <bs-modal-footer>
     <button type="button" class="btn btn-default" (click)="modal.dismiss()">Hủy bỏ</button>
-    <button type="button" class="btn btn-primary" [disabled]="amount===0" (click)="modal.close()" >Tạo mới</button>
+    <button type="button" class="btn btn-primary" [disabled]="amount===0" (click)="modal.close()" (click)="sendRequest()" >Tạo mới</button>
   </bs-modal-footer>
 </bs-modal>
