@@ -2,7 +2,7 @@ import { BehaviorSubject } from 'rxjs/BehaviorSubject';
 import { User } from './../components/user';
 import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable, OnInit } from '@angular/core';
-import { catchError, map } from 'rxjs/operators';
+import { catchError, map, tap } from 'rxjs/operators';
 import { environment } from './../../environments/environment';
 import { ToastsManager } from 'ng2-toastr';
 import { Observable } from 'rxjs/Observable';
@@ -28,7 +28,8 @@ export class AuthService implements OnInit{
     let url = this.base_url + '/login';
     return this.http.post(url, { username: username, password: password})
                .pipe(
-                 map((res: any) => res as User)
+                 map((res: any) => res as User),
+                 tap(res => this.currentUserData = res)
                )
   }
 

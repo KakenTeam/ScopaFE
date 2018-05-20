@@ -20,7 +20,7 @@ export class ListOrdersComponent implements OnInit {
   ) { 
     this.dtOptions = {
       pagingType: "simple_numbers",
-      order: [[3, 'desc']],
+      order: [],
       language: {
         url: '../../assets/i18n/datatables/vi.json'
       }

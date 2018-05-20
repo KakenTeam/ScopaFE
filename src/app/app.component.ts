@@ -27,7 +27,9 @@ export class AppComponent implements OnInit {
     this.toastr.setRootViewContainerRef(vcr);
     this.authService.validateUser().subscribe(res => {
       this.authService.currentUserData = res as User;
-      this.authService.userSignedIn$.next(true);
+      if (this.authService.currentUserData.admin) {
+        this.authService.userSignedIn$.next(true);
+      }
     },
       err => {
         console.log("Failed");

@@ -54,6 +54,7 @@ export class NavbarComponent implements OnInit, AfterViewInit {
   }
 
   logOut() {
-    // this.authSvc.logOut();
+    localStorage.removeItem("user_id");
+    this.router.navigate(["/login"]);
   }
 }

@@ -1,3 +1,4 @@
+import { AdminGuard } from './auth/admin.guard';
 import { DatePipe } from "@angular/common";
 import { HttpClientModule } from "@angular/common/http";
 import { NgModule } from '@angular/core';
@@ -19,6 +20,7 @@ import { SidebarComponent } from './layout/sidebar/sidebar.component';
 import { DateTimeViPipe } from './pipes/date-time-vi.pipe';
 import { VndPipe } from './pipes/vnd.pipe';
 import { ToastrService } from './components/toastr.service';
+import { LoggedInGuard } from './logged-in.guard';
 
 
 @NgModule({
@@ -46,7 +48,9 @@ import { ToastrService } from './components/toastr.service';
     AuthService,
     OrdersService,
     DatePipe,
-    ToastrService
+    ToastrService,
+    AdminGuard,
+    LoggedInGuard
   ],
   bootstrap: [AppComponent]
 })
