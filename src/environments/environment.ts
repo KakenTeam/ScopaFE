@@ -5,5 +5,5 @@
 
 export const environment = {
   production: false,
-  base_url: "https://scopa-production.herokuapp.com"
+  base_url: "http://localhost:3001"
 };

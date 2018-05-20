@@ -1,9 +1,9 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div navbar id="navbar" class="navbar navbar-default ace-save-state navbar-fixed-top">
+<div *ngIf="userLogged$ | async" navbar id="navbar" class="navbar navbar-default ace-save-state navbar-fixed-top">
 </div>
 
-<div class="main-container ace-save-state" id="main-container">
-  <div sidebar 
+<div  class="main-container ace-save-state" id="main-container">
+  <div sidebar *ngIf="userLogged$ | async"
     id="sidebar" class="sidebar responsive ace-save-state sidebar-fixed">
 
   </div>
@@ -13,5 +13,5 @@
     </div>
 
   </div>
-  <div footer class="footer" ></div>
+  <div *ngIf="userLogged$ | async" footer class="footer" ></div>
 </div>

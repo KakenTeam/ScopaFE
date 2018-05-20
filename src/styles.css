@@ -1,1 +1,48 @@
 /* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+#main-product {
+    margin-top: 1.2em;
+}
+
+.cdk-overlay-container {
+    z-index: 2000;
+    position: absolute;
+}
+
+.wrapper-full-page {
+    height: auto;
+    min-height: 100vh;
+}
+
+.modal-body {
+  padding: 0 15px;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.order-recent-expire {
+    background-color: lemonchiffon !important;
+}
+
+.order-expired {
+    background-color: bisque !important;
+}
+
+.right-align {
+  text-align: right;
+}
+
+.pl-0 {
+  padding-left: 0;
+}
+
+td {
+    vertical-align: middle !important;
+}
+
+.card-key {
+  font-size: 1.119em;
+  color: #3b73af;
+}
