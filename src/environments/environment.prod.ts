@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  base_url: "http://scopa-production.herokuapp.com"
+  base_url: "https://scopa-production.herokuapp.com"
 };

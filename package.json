@@ -8,6 +8,7 @@
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
+    "deploy": "ng build --env=prod --prod --base-href 'https://kakenteam.github.io/ScopaFE/' && angular-cli-ghpages",
     "e2e": "ng e2e"
   },
   "private": true,
