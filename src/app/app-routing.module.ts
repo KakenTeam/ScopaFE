@@ -1,3 +1,4 @@
+import { ListCardsComponent } from './list-cards/list-cards.component';
 import { AdminGuard } from './auth/admin.guard';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -8,6 +9,11 @@ const routes: Routes = [
   {
     path: 'list-orders', 
     component: ListOrdersComponent,
+    canActivate: [AdminGuard]
+  },
+  {
+    path: 'list-cards',
+    component: ListCardsComponent,
     canActivate: [AdminGuard]
   },
   {

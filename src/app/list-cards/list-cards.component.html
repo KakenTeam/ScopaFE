@@ -1,3 +1,23 @@
-<p>
-  list-cards works!
-</p>
+<div class="col-md-12">
+  <h1>Danh sách thẻ</h1>
+
+  <div class="table-responsive">
+    <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" id="dynamic-table_wrapper" class="table table-responsive table-striped table-bordered
+                    table-hover dataTable no-footer" cellspacing="0" width="100%">
+
+      <thead>
+        <tr>
+          <th>Mã thẻ</th>
+          <th class="text-right">Mệnh giá</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let card of cards">
+          <td>{{ card._id }}</td>
+          <td class="text-right">{{ card.amount | vnd }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
